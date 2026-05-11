@@ -357,8 +357,58 @@ p {
   gap: 14px;
 }
 
+.contact-box {
+  min-width: 0;
+}
+
+.contact-box-compact {
+  align-content: start;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
 .contact-box a {
   font-weight: 700;
+}
+
+.steps-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.steps-grid-five {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.step-card {
+  min-width: 0;
+  height: 100%;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+}
+
+.step-card-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.step-card p {
+  margin: 0;
+  color: var(--muted);
 }
 
 .form-grid {
@@ -671,7 +721,9 @@ p {
   .features,
   .audience-grid,
   .faq-grid,
-  .trust-grid {
+  .trust-grid,
+  .steps-grid,
+  .steps-grid-five {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -717,8 +769,14 @@ p {
   .features,
   .audience-grid,
   .faq-grid,
-  .trust-grid {
+  .trust-grid,
+  .steps-grid,
+  .steps-grid-five {
     grid-template-columns: 1fr;
+  }
+
+  .step-card {
+    padding: 20px;
   }
 
   .btn {
