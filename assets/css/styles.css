@@ -359,6 +359,7 @@ p {
 
 .contact-box {
   min-width: 0;
+  padding: 24px;
 }
 
 .contact-box-compact {
